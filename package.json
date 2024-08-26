@@ -1,7 +1,7 @@
 {
   "name": "nobak-sdk",
   "description": "sdk for nobak developers",
-  "version": "0.0.0-657371207c8b",
+  "version": "0.0.0-cf438399cf77",
   "main": "./lib/index.js",
   "author": "Julian <jclatro@yahoo.com> (https://nobak.net)",
   "bugs": {
@@ -48,7 +48,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nobak-net/nobak-sdk"
+    "url": "git+https://github.com/nobak-net/nobak-sdk.git"
   },
   "scripts": {
     "dev": "npx tsc -w",
@@ -64,6 +64,6 @@
     "test-coverage": "cross-env NODE_ENV=test nyc npm run test"
   },
   "volta": {
-    "node": "16.20.2"
+    "node": "20.17.0"
   }
 }
