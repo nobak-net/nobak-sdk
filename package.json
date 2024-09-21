@@ -1,7 +1,7 @@
 {
   "name": "nobak-sdk",
   "description": "sdk for nobak developers",
-  "version": "0.0.0-cf438399cf77",
+  "version": "0.0.0-b6c90b891313",
   "main": "./lib/index.js",
   "author": "Julian <jclatro@yahoo.com> (https://nobak.net)",
   "bugs": {
