@@ -11,8 +11,8 @@ declare class Account {
         type: any;
         value: any;
     }): Promise<any>;
-    verify({ type, state }: {
-        type: any;
+    verify({ value, state }: {
+        value: any;
         state: any;
     }): Promise<any>;
     profile(): Promise<any>;

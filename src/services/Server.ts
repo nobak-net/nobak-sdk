@@ -23,15 +23,15 @@ export class Server {
         return response;
     }
 
-    async auth({ server_id }) {
+    async auth({ name }) {
         const { API_HOST, KEY, USER_TOKEN } = this;
-        const response = await api({ url: `${API_HOST}/v1/servers/auth`, key: KEY, method: 'POST', body: { server_id }, userToken: USER_TOKEN })
+        const response = await api({ url: `${API_HOST}/v1/servers/auth`, key: KEY, method: 'POST', body: { name }, userToken: USER_TOKEN })
         return response;
     }
 
-    async verify({ server_id, signed_xdr }) {
+    async verify({ name, signed_xdr }) {
         const { API_HOST, KEY, USER_TOKEN } = this;
-        const response = await api({ url: `${API_HOST}/v1/servers/verify`, key: KEY, method: 'POST', body: { server_id, signed_xdr }, userToken: USER_TOKEN })
+        const response = await api({ url: `${API_HOST}/v1/servers/verify`, key: KEY, method: 'POST', body: { name, signed_xdr }, userToken: USER_TOKEN })
         return response;
     }
 
