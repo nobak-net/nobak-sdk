@@ -9,11 +9,11 @@ export declare class Server {
     });
     list(): Promise<any>;
     available(): Promise<any>;
-    auth({ server_id }: {
-        server_id: any;
+    auth({ name }: {
+        name: any;
     }): Promise<any>;
-    verify({ server_id, signed_xdr }: {
-        server_id: any;
+    verify({ name, signed_xdr }: {
+        name: any;
         signed_xdr: any;
     }): Promise<any>;
 }

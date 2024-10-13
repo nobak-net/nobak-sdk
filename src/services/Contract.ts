@@ -45,26 +45,26 @@ class Contract {
     const url = `${this.API_HOST}/v1/contracts/${contract}`;
 
     // Prepare the request body based on contract type
-    let body: any = { contract: contract };
+    let body: any = { contract, data: {} };
 
     switch (contract) {
       case ContractType.ADD_SIGNERS:
         if (!Array.isArray(data.server_ids) || data.server_ids.length < 2) {
           throw new Error('At least two server_ids are required for Add Signers');
         }
-        body.server_ids = data.server_ids;
+        body.data.server_ids = data.server_ids;
         break;
 
       case ContractType.REMOVE_SIGNERS:
         if (!Array.isArray(data.server_ids) || data.server_ids.length < 2) {
           throw new Error('At least two server_ids are required for Remove Signers');
         }
-        body.server_ids = data.server_ids;
+        body.data.server_ids = data.server_ids;
         break;
 
       case ContractType.SIGN:
         const { XDR } = data;
-        body.XDR = XDR;
+        body.data.XDR = XDR;
         break;
 
       default:

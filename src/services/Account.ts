@@ -18,9 +18,9 @@ class Account {
         return response;
     }
 
-    async verify({ type, state }) {
+    async verify({ value, state }) {
         const { API_HOST, KEY, USER_TOKEN } = this;
-        const response = await api({ url: `${API_HOST}/v1/accounts/verify`, key: KEY, method: 'POST', body: { type, state }, userToken: USER_TOKEN })
+        const response = await api({ url: `${API_HOST}/v1/accounts/verify`, key: KEY, method: 'POST', body: { value, state }, userToken: USER_TOKEN })
         return response;
     }
 
